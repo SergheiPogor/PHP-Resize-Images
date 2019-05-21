@@ -75,5 +75,14 @@ label{
 }
 input[type=checkbox]:checked+img{     
     border: 2px solid red;
+    opacity: 0.3;
+}
+
+input[type=checkbox]:checked .centered{     
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
 }
 </style>
