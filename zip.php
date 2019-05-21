@@ -5,8 +5,12 @@ $folder= $_GET['folder'] ?? '';
 $file_names = scandir("downloads/$folder");
 array_splice($file_names, 0, 2);
 
-print $folder;
-var_dump($file_names);
+if (!file_exists("zip")) {
+    mkdir("zip");
+}
+
+// print $folder;
+// var_dump($file_names);
 //exit;
 
 $zip = new ZipArchive;

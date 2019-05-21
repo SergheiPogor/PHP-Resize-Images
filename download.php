@@ -11,6 +11,9 @@ $image = $_GET['image'] ?? '1.jpg';
 $w = $_GET['w'] ?? 1000; 
 $h = $_GET['h'] ?? 800;
 
+if (!file_exists("downloads")) {
+    mkdir("downloads");
+}
 
 $folder_to_download = time();
 mkdir("downloads/$folder_to_download");
